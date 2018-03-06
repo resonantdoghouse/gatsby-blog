@@ -26,7 +26,7 @@ const TemplateWrapper = ({children, data}) => (
             {children()}
         </div>
     </div>
-)
+);
 
 TemplateWrapper.propTypes = {
     children: PropTypes.func,
@@ -35,7 +35,7 @@ TemplateWrapper.propTypes = {
 export default TemplateWrapper
 
 export const query = graphql`
-    query SiteMeta {
+    query LayoutQuery {
       site {
         siteMetadata {
           title
