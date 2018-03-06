@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import logo from '../../images/logo.svg';
+
 const Header = () => (
   <div
     style={{
@@ -23,7 +25,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          Gatsby
+          <img src={logo} alt="logo" />
         </Link>
       </h1>
     </div>
