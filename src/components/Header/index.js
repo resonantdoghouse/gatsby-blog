@@ -20,7 +20,20 @@ const HeaderContainer = styled.div`
     padding: 1.45rem 1.0875rem;
 `;
 
-const Header = () => (
+const ScreenReader = styled.span`
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+`;
+
+const Header = ({data}) => (
     <HeaderWrapper>
         <HeaderContainer>
             <h1 style={{margin: 0}}>
@@ -31,6 +44,7 @@ const Header = () => (
                         textDecoration: 'none',
                     }}
                 >
+                    <ScreenReader class="screen-reader">{data.site.siteMetadata.title}</ScreenReader>
                     <img src={logo} alt="logo"/>
                 </Link>
             </h1>
